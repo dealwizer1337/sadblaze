@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="tyn.css">
+			<link rel="stylesheet" href="css/lightbox.min.css">
+	<script src=js/lightbox-plus-jquery.min.js></script>	
+	<title>tyans</title>
+</head>
+<body>
+<div class="container">
+		<div class="banner">
+			<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+			<h2> [tyans] </h2>
+			<p>есть одна тян</p>
+
+		</div>
+		<header>
+		<a href="../../web.html" class="logo">[sadblaze]</a>
+		<ul>
+
+		<li class="active"><a href="../pic.html">pic</a></li>
+		<li><a href="../../dvd/dvd.html">dvd</a></li>
+		<li><a href="../../tune/tu.html">tune</a></li>
+		<li><a href="../../ab/ab.html">about</a></li>
+		
+		</ul>
+	</header>
+
+ <div class="container1">
+ <p> Tyan's Kingdom </p>
+ <p> coming soon </p>
+ <hr>
+
+  <div class="count">
+  	<div class="countd">
+  		<span id="days">00</span>
+  		дней
+  	</div>
+
+  	  
+  	<div class="countd">
+  		<span id="hours">00</span>
+  		часов
+  	</div>
+
+  	  
+  	<div class="countd">
+  		<span id="minutes">00</span>
+  		минут
+  	</div>
+
+  	  
+  	<div class="countd">
+  		<span id="seconds">00</span>
+  		секунд
+  	</div>
+
+<script type="text/javascript">
+	var count = new Date("jul 1,2019 00:00:00").getTime();
+	var x = setInterval(function(){
+		var now = new Date().getTime();
+		var d = count - now;
+
+		var days = Math.floor(d/(1000*60*60*24));
+		var hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+		var minutes = Math.floor((d%(1000*60*60))/(1000*60));
+		var seconds = Math.floor((d%(1000*60))/1000);
+
+		document.getElementById("days").innerHTML = days;
+		document.getElementById("hours").innerHTML = hours;
+		document.getElementById("minutes").innerHTML = minutes;
+		document.getElementById("seconds").innerHTML = seconds;
+
+		if(d <= 0){
+			clearInterval(x);
+		}
+
+	},1000);
+</script>
+
+
+</body>
+</html>
